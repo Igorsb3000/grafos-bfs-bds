@@ -1,5 +1,4 @@
-def criar_lista(n: int, arestas: list[tuple[int, int]]) -> list[list[int]]:
-    """Cria a lista de adjacência de um grafo não direcionado."""
+def criar_lista_nao_direcionada(n: int, arestas: list[tuple[int, int]]) -> list[list[int]]:
     # PASSO 1 – Criação das listas
     # Cada vértice começa com uma lista vazia (ainda sem vizinhos)
     lista = [[] for _ in range(n)]
@@ -18,9 +17,21 @@ def criar_lista(n: int, arestas: list[tuple[int, int]]) -> list[list[int]]:
 
     return lista
 
+def criar_lista_direcionada(n: int, arcos: list[tuple[int, int]]) -> list[list[int]]:
+    lista = [[] for _ in range(n)]
+
+    # Cada arco (u, v) vai somente de u para v:
+    # v entra na lista de u, mas u NÃO entra na lista de v
+    for u, v in arcos:
+        lista[u].append(v)
+
+    # Mantém os vizinhos em ordem crescente
+    for vizinhos in lista:
+        vizinhos.sort()
+
+    return lista
 
 def exibir_lista(lista: list[list[int]]) -> None:
-    """Exibe os vizinhos de cada vértice da lista de adjacência."""
     # PASSO 3 – Exibição da lista
     for i in range(len(lista)):
         print(f"{i} → [", end="")

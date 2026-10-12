@@ -1,6 +1,5 @@
 def busca_profundidade(lista: list[list[int]], u: int, visitado: list[bool],
                        ordem: list[int], profundidade: int = 0) -> None:
-    """Procedimento recursivo da DFS: visita u e aprofunda em cada vizinho não visitado."""
     # Recuo proporcional à profundidade da chamada, para visualizar a recursão
     recuo = "  " * profundidade
 
@@ -22,7 +21,6 @@ def busca_profundidade(lista: list[list[int]], u: int, visitado: list[bool],
 
 
 def dfs_recursiva(lista: list[list[int]], inicio: int) -> list[int]:
-    """Executa a DFS recursiva a partir de inicio e retorna a ordem de visitação."""
     # Inicialmente nenhum vértice foi visitado
     visitado = [False] * len(lista)
 

@@ -1,11 +1,9 @@
 def formatar_pilha(pilha: list[int]) -> list[int]:
-    """Retorna a pilha com o topo primeiro, apenas para exibição."""
     # Na lista Python o topo fica no FINAL; invertemos só para exibir
     return list(reversed(pilha))
 
 
 def dfs_pilha(lista: list[list[int]], inicio: int) -> list[int]:
-    """Executa a DFS iterativa com pilha explícita e retorna a ordem de visitação."""
     # PASSO 1 – PREPARAÇÃO
     # Inicialmente nenhum vértice foi visitado
     visitado = [False] * len(lista)

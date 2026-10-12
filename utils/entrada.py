@@ -1,5 +1,4 @@
 def ler_inteiro(mensagem: str) -> int:
-    """Repete a leitura até o usuário digitar um número inteiro válido."""
     while True:
         try:
             return int(input(mensagem))
@@ -8,7 +7,6 @@ def ler_inteiro(mensagem: str) -> int:
 
 
 def ler_vertice(n: int, mensagem: str = "Vértice inicial: ") -> int:
-    """Lê um vértice válido entre 0 e n - 1."""
     vertice = ler_inteiro(mensagem)
     # Repete a leitura enquanto o vértice não existir no grafo
     while not (0 <= vertice < n):
@@ -17,7 +15,6 @@ def ler_vertice(n: int, mensagem: str = "Vértice inicial: ") -> int:
 
 
 def ler_grafo() -> tuple[int, list[tuple[int, int]]]:
-    """Lê do usuário a quantidade de vértices e as arestas de um grafo simples."""
     # Leitura da quantidade de vértices (n)
     n = ler_inteiro("Insira a quantidade de vértices: ")
     while n <= 0:

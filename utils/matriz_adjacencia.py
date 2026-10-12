@@ -1,5 +1,4 @@
 def criar_matriz(n: int, arestas: list[tuple[int, int]]) -> list[list[int]]:
-    """Cria a matriz de adjacência n x n de um grafo não direcionado."""
     # PASSO 1 – Criação e inicialização da matriz n x n com zeros
     # (inicialmente não há ligação entre nenhum par de vértices)
     matriz = [[0 for _ in range(n)] for _ in range(n)]
@@ -12,9 +11,7 @@ def criar_matriz(n: int, arestas: list[tuple[int, int]]) -> list[list[int]]:
 
     return matriz
 
-
 def exibir_matriz(matriz: list[list[int]]) -> None:
-    """Exibe a matriz de adjacência com rótulos de linhas e colunas."""
     n = len(matriz)
 
     # PASSO 3 – Exibição da matriz

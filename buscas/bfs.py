@@ -1,8 +1,7 @@
 from collections import deque
 
 
-def bfs(lista: list[list[int]], inicio: int) -> list[int]:
-    """Executa a busca em largura a partir de inicio e retorna a ordem de visitação."""
+def bfs(lista: list[list[int]], inicio: int):
     # Inicialmente nenhum vértice foi visitado
     visitado = [False] * len(lista)
 
@@ -48,4 +47,4 @@ def bfs(lista: list[list[int]], inicio: int) -> list[int]:
         print(f"  Fila: {list(fila)}")
         print(f"  Visitados: {visitados}")
 
-    return ordem
+    return ordem, visitados
